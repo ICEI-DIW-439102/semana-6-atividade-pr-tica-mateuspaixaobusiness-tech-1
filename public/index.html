@@ -4,97 +4,221 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Psyche - Música Independente</title>
+   <!-- Bootstrap 5 via CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+ 
+  <!-- Bootstrap Icons via CDN -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    rel="stylesheet"
+  />
   <link rel="stylesheet" href="styles.css" />
+
 </head>
 <body>
 
-  <!-- CABEÇALHO -->
-  <header>
-    <div class="container cabecalho-inner">
-      <div class="logo"> Psyche</div>
-
-      <nav>
-        <ul class="menu">
-          <li><a href="#inicio">Início</a></li>
-          <li><a href="#sobre">Sobre</a></li>
-          <li><a href="#artistas">Artistas</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-      </nav>
-    </div>
+   <header class="sticky-top">
+    <nav class="navbar navbar-expand-md navbar-dark">
+      <div class="container">
+ 
+        <!-- Logo -->
+        <a class="navbar-brand logo" href="#inicio">🎵 Psyche</a>
+ 
+        <!-- Botão hamburguer para mobile -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuPrincipal"
+          aria-controls="menuPrincipal"
+          aria-expanded="false"
+          aria-label="Abrir menu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+ 
+        <!-- Links de navegação -->
+        <div class="collapse navbar-collapse" id="menuPrincipal">
+          <ul class="navbar-nav ms-auto gap-md-2">
+            <li class="nav-item">
+              <a class="nav-link" href="#inicio">Início</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sobre">Sobre</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#artistas">Artistas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contato">Contato</a>
+            </li>
+          </ul>
+        </div>
+ 
+      </div>
+    </nav>
   </header>
-
-  <!-- CONTEÚDO PRINCIPAL -->
+ 
+ 
+  <!-- =============================================
+       CONTEÚDO PRINCIPAL
+       ============================================= -->
   <main>
-
+ 
     <!-- BANNER PRINCIPAL -->
     <section class="banner" id="inicio">
-      <div class="container">
-        <h1>Sua música merece ser ouvida</h1>
-        <p>A Psyche é uma plataforma para artistas independentes divulgarem seu trabalho, conectarem com fãs e crescerem sem depender de grandes gravadoras.</p>
-        <a href="#artistas" class="botao">Conhecer artistas</a>
+      <div class="container text-center">
+        <h1 class="display-5 fw-bold mb-4">Sua música merece ser ouvida</h1>
+        <p class="lead mb-4 mx-auto" style="max-width: 600px;">
+          A Psyche é uma plataforma para artistas independentes divulgarem seu trabalho,
+          conectarem com fãs e crescerem sem depender de grandes gravadoras.
+        </p>
+        <a href="#artistas" class="btn btn-psyche">Conhecer artistas</a>
       </div>
     </section>
-
+ 
+ 
     <!-- TEXTO INTRODUTÓRIO -->
     <section class="introducao" id="sobre">
       <div class="container">
-        <h2>O que é a Psyche?</h2>
-        <p>A Psyche nasceu da vontade de dar voz a quem cria música de verdade. Artistas independentes enfrentam muitos obstáculos para divulgar seu trabalho — aqui, esse caminho fica mais fácil.</p>
-        <p>Seja você um cantor, produtor, compositor ou banda, a Psyche é o seu espaço. Cadastre-se, suba suas músicas e conecte com pessoas que valorizam arte de verdade.</p>
-      </div>
-    </section>
-
-    <!-- CARDS DE ARTISTAS -->
-    <section class="artistas" id="artistas">
-      <div class="container">
-        <h2>Artistas em destaque</h2>
-        <p class="subtitulo">Conheça quem está fazendo música independente agora</p>
-
-        <div class="cards">
-
-          <div class="card">
-            <div class="card-imagem img-1"></div>
-            <h3>Ana Lua</h3>
-            <p>Cantora e compositora de MPB contemporânea. Suas letras falam de amor, saudade e cidade grande. Com mais de 3 anos de carreira independente, já lançou 2 EPs autorais.</p>
+        <div class="row align-items-center g-4">
+ 
+          <!-- Texto -->
+          <div class="col-12 col-md-7">
+            <h2 class="mb-3">O que é a Psyche?</h2>
+            <p>
+              A Psyche nasceu da vontade de dar voz a quem cria música de verdade.
+              Artistas independentes enfrentam muitos obstáculos para divulgar seu trabalho
+              — aqui, esse caminho fica mais fácil.
+            </p>
+            <p class="mb-0">
+              Seja você um cantor, produtor, compositor ou banda, a Psyche é o seu espaço.
+              Cadastre-se, suba suas músicas e conecte com pessoas que valorizam arte de verdade.
+            </p>
           </div>
-
-          <div class="card">
-            <div class="card-imagem img-2"></div>
-            <h3>Trio Maré</h3>
-            <p>Grupo de jazz e soul formado em São Paulo. Misturam influências brasileiras com sonoridade americana. Tocam em bares e festivais desde 2020.</p>
+ 
+          <!-- Bloco decorativo (desktop) -->
+          <div class="col-12 col-md-5 d-none d-md-flex justify-content-center">
+            <div class="decorativo-sobre text-center p-4">
+              <div class="fs-1 mb-2">🎶</div>
+              <p class="mb-1 fw-bold text-white">+500 artistas</p>
+              <p class="text-secondary small mb-0">cadastrados na plataforma</p>
+            </div>
           </div>
-
-          <div class="card">
-            <div class="card-imagem img-3"></div>
-            <h3>DJ Sombra</h3>
-            <p>Produtor eletrônico que mistura ritmos afro-brasileiros com batidas modernas. Seus sets já passaram por festas underground em todo o Brasil.</p>
-          </div>
-
+ 
         </div>
       </div>
     </section>
-
-  </main>
-
-  <!-- RODAPÉ -->
-  <footer id="contato">
-    <div class="container rodape-inner">
-      <div class="rodape-info">
-        <p><strong>🎵 Psyche</strong></p>
-        <p>contato@psychemusica.com.br</p>
-        <p>© 2025 Psyche - Todos os direitos reservados</p>
+ 
+ 
+    <!-- CARDS DE ARTISTAS -->
+    <section class="artistas" id="artistas">
+      <div class="container">
+ 
+        <h2 class="mb-1 text-white">Artistas em destaque</h2>
+        <p class="subtitulo mb-4">Conheça quem está fazendo música independente agora</p>
+ 
+        <!-- Row Bootstrap: 3 colunas no desktop, 1 no mobile -->
+        <div class="row g-4">
+ 
+          <!-- Card 1 -->
+          <div class="col-12 col-md-4">
+            <div class="card h-100">
+              <div class="card-imagem img-1"></div>
+              <div class="card-body">
+                <h3 class="card-title">Ana Lua</h3>
+                <p class="card-text">
+                  Cantora e compositora de MPB contemporânea. Suas letras falam de amor,
+                  saudade e cidade grande. Com mais de 3 anos de carreira independente,
+                  já lançou 2 EPs autorais.
+                </p>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- Card 2 -->
+          <div class="col-12 col-md-4">
+            <div class="card h-100">
+              <div class="card-imagem img-2"></div>
+              <div class="card-body">
+                <h3 class="card-title">Trio Maré</h3>
+                <p class="card-text">
+                  Grupo de jazz e soul formado em São Paulo. Misturam influências brasileiras
+                  com sonoridade americana. Tocam em bares e festivais desde 2020.
+                </p>
+              </div>
+            </div>
+          </div>
+ 
+          <!-- Card 3 -->
+          <div class="col-12 col-md-4">
+            <div class="card h-100">
+              <div class="card-imagem img-3"></div>
+              <div class="card-body">
+                <h3 class="card-title">DJ Sombra</h3>
+                <p class="card-text">
+                  Produtor eletrônico que mistura ritmos afro-brasileiros com batidas modernas.
+                  Seus sets já passaram por festas underground em todo o Brasil.
+                </p>
+              </div>
+            </div>
+          </div>
+ 
+        </div>
       </div>
-
-      <div class="rodape-redes">
-        <p><strong>Redes sociais</strong></p>
-        <a href="#">Instagram</a>
-        <a href="#">YouTube</a>
-        <a href="#">Spotify</a>
-        <a href="#">Twitter</a>
+    </section>
+ 
+  </main>
+ 
+ 
+  <!-- =============================================
+       RODAPÉ
+       ============================================= -->
+  <footer id="contato">
+    <div class="container">
+      <div class="row g-4 py-4">
+ 
+        <!-- Informações institucionais -->
+        <div class="col-12 col-md-6">
+          <p class="fw-bold fs-5 text-white mb-2">🎵 Psyche</p>
+          <p class="text-secondary small mb-1">
+            <i class="bi bi-envelope me-1"></i>
+            contato@psychemusica.com.br
+          </p>
+          <p class="text-secondary small mb-0">
+            © 2025 Psyche — Todos os direitos reservados
+          </p>
+        </div>
+ 
+        <!-- Redes sociais -->
+        <div class="col-12 col-md-6">
+          <p class="fw-bold text-white mb-2">Redes sociais</p>
+          <div class="d-flex flex-column gap-1">
+            <a href="#" class="rodape-link">
+              <i class="bi bi-instagram me-2"></i>Instagram
+            </a>
+            <a href="#" class="rodape-link">
+              <i class="bi bi-youtube me-2"></i>YouTube
+            </a>
+            <a href="#" class="rodape-link">
+              <i class="bi bi-spotify me-2"></i>Spotify
+            </a>
+            <a href="#" class="rodape-link">
+              <i class="bi bi-twitter-x me-2"></i>Twitter
+            </a>
+          </div>
+        </div>
+ 
       </div>
     </div>
   </footer>
-
+ 
+ 
+  <!-- Bootstrap JS Bundle (inclui Popper) via CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+ 
 </body>
 </html>

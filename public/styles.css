@@ -1,14 +1,22 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+:root {
+  --roxo: #9b59b6;
+  --roxo-dark: #7d3c98;
+  --bg-body: #0e0e0e;
+  --bg-header: #1a1a1a;
+  --bg-banner: #1a1a2e;
+  --bg-intro: #141414;
+  --bg-card: #1a1a1a;
+  --bg-footer: #111111;
+  --text-main: #f0f0f0;
+  --text-muted-custom: #aaaaaa;
+  --border-color: #333;
 }
  
+/* Sobrescreve fundo padrão do Bootstrap */
 body {
+  background-color: var(--bg-body);
+  color: var(--text-main);
   font-family: Arial, sans-serif;
-  background-color: #0e0e0e;
-  color: #f0f0f0;
   line-height: 1.6;
 }
  
@@ -17,158 +25,132 @@ a {
   color: inherit;
 }
  
-ul {
-  list-style: none;
-}
  
-/* Container central */
-.container {
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
- 
- 
-/* =============================================
-   CABEÇALHO
-   ============================================= */
+
  
 header {
-  background-color: #1a1a1a;
-  border-bottom: 2px solid #9b59b6;
-  padding: 15px 0;
-  position: sticky;
-  top: 0;
   z-index: 10;
 }
  
-.cabecalho-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.navbar {
+  background-color: var(--bg-header) !important;
+  border-bottom: 2px solid var(--roxo);
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
  
-.logo {
+.navbar-brand.logo {
   font-size: 22px;
   font-weight: bold;
-  color: #9b59b6;
+  color: var(--roxo) !important;
 }
  
-.menu {
-  display: flex;
-  gap: 30px;
-}
- 
-.menu a {
-  color: #f0f0f0;
+.navbar-nav .nav-link {
+  color: var(--text-main) !important;
   font-size: 15px;
+  transition: color 0.2s;
 }
  
-.menu a:hover {
-  color: #9b59b6;
+.navbar-nav .nav-link:hover {
+  color: var(--roxo) !important;
+}
+ 
+/* Cor do ícone hamburguer */
+.navbar-toggler {
+  border-color: var(--roxo);
+}
+ 
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%239b59b6' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
  
  
-/* =============================================
-   BANNER
-   ============================================= */
  
 .banner {
-  background-color: #1a1a2e;
+  background-color: var(--bg-banner);
   padding: 80px 0;
-  text-align: center;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid var(--border-color);
 }
  
 .banner h1 {
-  font-size: 42px;
-  margin-bottom: 20px;
   color: #ffffff;
 }
  
-.banner p {
-  font-size: 18px;
-  color: #aaaaaa;
-  max-width: 600px;
-  margin: 0 auto 30px auto;
+.banner .lead {
+  color: var(--text-muted-custom);
 }
  
-.botao {
-  background-color: #9b59b6;
+/* Botão customizado roxo */
+.btn-psyche {
+  background-color: var(--roxo);
   color: #fff;
   padding: 12px 28px;
   border-radius: 6px;
   font-size: 16px;
+  border: none;
+  transition: background-color 0.2s;
   display: inline-block;
 }
  
-.botao:hover {
-  background-color: #7d3c98;
+.btn-psyche:hover {
+  background-color: var(--roxo-dark);
+  color: #fff;
 }
  
  
-/* =============================================
-   INTRODUÇÃO
-   ============================================= */
- 
+
 .introducao {
   padding: 60px 0;
-  background-color: #141414;
-  border-bottom: 1px solid #333;
+  background-color: var(--bg-intro);
+  border-bottom: 1px solid var(--border-color);
 }
  
 .introducao h2 {
   font-size: 28px;
-  margin-bottom: 16px;
-  color: #9b59b6;
+  color: var(--roxo);
 }
  
 .introducao p {
   color: #cccccc;
-  margin-bottom: 12px;
-  max-width: 700px;
+}
+ 
+
+.decorativo-sobre {
+  background-color: #1a1a1a;
+  border: 1px solid var(--roxo);
+  border-radius: 12px;
+  width: 200px;
 }
  
  
-/* =============================================
-   ARTISTAS / CARDS
-   ============================================= */
+
  
 .artistas {
   padding: 60px 0;
-  background-color: #0e0e0e;
+  background-color: var(--bg-body);
 }
  
 .artistas h2 {
   font-size: 28px;
-  margin-bottom: 8px;
-  color: #fff;
 }
  
 .subtitulo {
-  color: #aaaaaa;
-  margin-bottom: 40px;
+  color: var(--text-muted-custom);
 }
  
-/* Grid de cards: 3 colunas no desktop */
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
- 
+
 .card {
-  background-color: #1a1a1a;
-  border: 1px solid #333;
+  background-color: var(--bg-card) !important;
+  border: 1px solid var(--border-color) !important;
   border-radius: 10px;
   overflow: hidden;
+  transition: border-color 0.2s;
 }
  
 .card:hover {
-  border-color: #9b59b6;
+  border-color: var(--roxo) !important;
 }
  
-/* Imagem de cada card (cor de fundo como placeholder) */
 .card-imagem {
   height: 160px;
   width: 100%;
@@ -178,103 +160,35 @@ header {
 .img-2 { background-color: #1a3a5a; }
 .img-3 { background-color: #1a3a2a; }
  
-.card h3 {
+.card-body {
+  padding: 16px;
+}
+ 
+.card-title {
   font-size: 18px;
-  margin: 16px 16px 8px 16px;
   color: #fff;
+  margin-bottom: 8px;
 }
  
-.card p {
+.card-text {
   font-size: 14px;
-  color: #aaaaaa;
-  margin: 0 16px 16px 16px;
+  color: var(--text-muted-custom);
+  margin: 0;
 }
  
  
-/* =============================================
-   RODAPÉ
-   ============================================= */
- 
+
 footer {
-  background-color: #111111;
-  border-top: 2px solid #9b59b6;
-  padding: 40px 0;
+  background-color: var(--bg-footer);
+  border-top: 2px solid var(--roxo);
 }
  
-.rodape-inner {
-  display: flex;
-  justify-content: space-between;
-  gap: 30px;
-}
- 
-.rodape-info p {
-  color: #aaaaaa;
-  margin-bottom: 6px;
+.rodape-link {
+  color: var(--text-muted-custom);
   font-size: 14px;
+  transition: color 0.2s;
 }
  
-.rodape-redes {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
+.rodape-link:hover {
+  color: var(--roxo);
 }
- 
-.rodape-redes p {
-  color: #f0f0f0;
-  margin-bottom: 4px;
-}
- 
-.rodape-redes a {
-  color: #aaaaaa;
-  font-size: 14px;
-}
- 
-.rodape-redes a:hover {
-  color: #9b59b6;
-}
-@media (max-width: 768px) {
- 
-  /* Cards passam pra 1 coluna no mobile */
-  .cards {
-    grid-template-columns: 1fr;
-  }
- 
-  /* Menu vira coluna */
-  .cabecalho-inner {
-    flex-direction: column;
-    gap: 12px;
-  }
- 
-  .menu {
-    gap: 16px;
-  }
- 
-  /* Banner menor */
-  .banner h1 {
-    font-size: 28px;
-  }
- 
-  .banner p {
-    font-size: 16px;
-  }
- 
-  /* Rodapé vira coluna */
-  .rodape-inner {
-    flex-direction: column;
-  }
-}
- 
-/* Mobile pequeno */
-@media (max-width: 480px) {
- 
-  .banner h1 {
-    font-size: 22px;
-  }
- 
-  .menu {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
- 
-}
- 
