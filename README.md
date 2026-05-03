@@ -1,17 +1,27 @@
-# Trabalho Prático - Semana 6
+Informações Gerais
 
-Nessa atividade, como sempre, vamos evoluir o que foi feito na semana anterior. Fique atento para fazer o projeto da semana anterior e dar sequência nessa jornada.
+Nome: Mateus Ribeiro Paixão
+Matrícula: 907849
+Proposta de projeto escolhida: Plataforma de música independente
+Breve descrição sobre seu projeto:
+O Psyche é uma plataforma web voltada para artistas musicais independentes. O objetivo é oferecer um espaço para que cantores, produtores, compositores e bandas possam divulgar seu trabalho, conectar com fãs e crescer sem depender de grandes gravadoras. A home-page apresenta um cabeçalho com navegação, um banner principal, uma seção introdutória sobre a plataforma e cards com artistas em destaque.
 
-No trabalho dessa semana vamos alterar o projeto para que a responsividade da home-page seja feita, agora, com o framework Bootstrap.
 
-**IMPORTANTE 1:** Você deve alterar apenas os arquivos **`README.md`**, **`index.html`** e **`styles.css`**, podendo incluir outros arquivos como imagens na pasta **`images`**, caso necessário. Deixe todos os demais arquivos e pastas desse repositório inalterados. **PRESTE MUITA ATENÇÃO NISSO.**
+Tecnologias Utilizadas
 
-## Informações Gerais
+HTML5
+CSS3 (customizações visuais)
+Bootstrap 5.3 via CDN
+Bootstrap Icons 1.11 via CDN
+Git e GitHub
 
-- Nome:
-- Matricula:
-- Proposta de projeto escolhida:
-- Breve descrição sobre seu projeto:
+
+Estrutura de Arquivos
+/
+├── index.html       # Página principal (home-page)
+├── styles.css       # Estilos customizados (identidade visual do Psyche)
+├── img/             # Imagens do projeto
+└── README.md        # Documentação do projeto
 
 ## Print da versão responsiva com Bootstrap [DESKTOP]
 
@@ -22,4 +32,3 @@ No trabalho dessa semana vamos alterar o projeto para que a responsividade da ho
 <<  COLOQUE A IMAGEM AQUI >>
 
 
-(*) Utilize as ferramentas do desenvolvedor do seu navegador para colocar no modo reponsivo, escolha um celular qualquer e recarregue a página antes de tirar o print. 
