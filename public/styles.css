@@ -1,0 +1,280 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: Arial, sans-serif;
+  background-color: #0e0e0e;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+ 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ 
+ul {
+  list-style: none;
+}
+ 
+/* Container central */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+ 
+ 
+/* =============================================
+   CABEÇALHO
+   ============================================= */
+ 
+header {
+  background-color: #1a1a1a;
+  border-bottom: 2px solid #9b59b6;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+ 
+.cabecalho-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ 
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #9b59b6;
+}
+ 
+.menu {
+  display: flex;
+  gap: 30px;
+}
+ 
+.menu a {
+  color: #f0f0f0;
+  font-size: 15px;
+}
+ 
+.menu a:hover {
+  color: #9b59b6;
+}
+ 
+ 
+/* =============================================
+   BANNER
+   ============================================= */
+ 
+.banner {
+  background-color: #1a1a2e;
+  padding: 80px 0;
+  text-align: center;
+  border-bottom: 1px solid #333;
+}
+ 
+.banner h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+ 
+.banner p {
+  font-size: 18px;
+  color: #aaaaaa;
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+}
+ 
+.botao {
+  background-color: #9b59b6;
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 6px;
+  font-size: 16px;
+  display: inline-block;
+}
+ 
+.botao:hover {
+  background-color: #7d3c98;
+}
+ 
+ 
+/* =============================================
+   INTRODUÇÃO
+   ============================================= */
+ 
+.introducao {
+  padding: 60px 0;
+  background-color: #141414;
+  border-bottom: 1px solid #333;
+}
+ 
+.introducao h2 {
+  font-size: 28px;
+  margin-bottom: 16px;
+  color: #9b59b6;
+}
+ 
+.introducao p {
+  color: #cccccc;
+  margin-bottom: 12px;
+  max-width: 700px;
+}
+ 
+ 
+/* =============================================
+   ARTISTAS / CARDS
+   ============================================= */
+ 
+.artistas {
+  padding: 60px 0;
+  background-color: #0e0e0e;
+}
+ 
+.artistas h2 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #fff;
+}
+ 
+.subtitulo {
+  color: #aaaaaa;
+  margin-bottom: 40px;
+}
+ 
+/* Grid de cards: 3 colunas no desktop */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+ 
+.card {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 10px;
+  overflow: hidden;
+}
+ 
+.card:hover {
+  border-color: #9b59b6;
+}
+ 
+/* Imagem de cada card (cor de fundo como placeholder) */
+.card-imagem {
+  height: 160px;
+  width: 100%;
+}
+ 
+.img-1 { background-color: #4a235a; }
+.img-2 { background-color: #1a3a5a; }
+.img-3 { background-color: #1a3a2a; }
+ 
+.card h3 {
+  font-size: 18px;
+  margin: 16px 16px 8px 16px;
+  color: #fff;
+}
+ 
+.card p {
+  font-size: 14px;
+  color: #aaaaaa;
+  margin: 0 16px 16px 16px;
+}
+ 
+ 
+/* =============================================
+   RODAPÉ
+   ============================================= */
+ 
+footer {
+  background-color: #111111;
+  border-top: 2px solid #9b59b6;
+  padding: 40px 0;
+}
+ 
+.rodape-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+ 
+.rodape-info p {
+  color: #aaaaaa;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+ 
+.rodape-redes {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+ 
+.rodape-redes p {
+  color: #f0f0f0;
+  margin-bottom: 4px;
+}
+ 
+.rodape-redes a {
+  color: #aaaaaa;
+  font-size: 14px;
+}
+ 
+.rodape-redes a:hover {
+  color: #9b59b6;
+}
+@media (max-width: 768px) {
+ 
+  /* Cards passam pra 1 coluna no mobile */
+  .cards {
+    grid-template-columns: 1fr;
+  }
+ 
+  /* Menu vira coluna */
+  .cabecalho-inner {
+    flex-direction: column;
+    gap: 12px;
+  }
+ 
+  .menu {
+    gap: 16px;
+  }
+ 
+  /* Banner menor */
+  .banner h1 {
+    font-size: 28px;
+  }
+ 
+  .banner p {
+    font-size: 16px;
+  }
+ 
+  /* Rodapé vira coluna */
+  .rodape-inner {
+    flex-direction: column;
+  }
+}
+ 
+/* Mobile pequeno */
+@media (max-width: 480px) {
+ 
+  .banner h1 {
+    font-size: 22px;
+  }
+ 
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+ 
+}
+ 
